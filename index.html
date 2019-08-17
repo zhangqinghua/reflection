@@ -9,24 +9,19 @@
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/minigrid/1.6.5/minigrid.min.js"></script>
     <script src="https://cdn.staticfile.org/dynamics.js/1.1.5/dynamics.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="header.css">
 
     <style>
-        body {
-            background-color: #E9E9E9;
-        }
-        
         .grid {
             position: relative;
-            /* fluffy */
             margin: 0 auto;
             width: 98%;
-            /* end fluffy */
         }
         
         .grid-item {
             position: absolute;
             opacity: 0;
-            /* box-shadow: 1px 1px #9E9E9E; */
             width: 200px;
             background-color: #ffffff;
         }
@@ -49,18 +44,60 @@
             font: 12px/1.5 "Microsoft YaHei", Verdana;
         }
         
-        header {
-            height: 150px;
-            margin-top: -4%;
-            background: url(http://www.doyo.cn/Tpl/web/Public/images/tu_header_bg.png) center 0 repeat-x;
+        h1 {
+            text-align: center;
         }
         
-        @media (max-width: 600px) {
-            .grid-item {
-                width: 105px;
-            }
+        .search-box {
+            position: absolute;
+            top: 15%;
+            right: 10px;
+            background: #2f3640;
+            border-radius: 40px;
+        }
+        
+        .search-box:hover>.search-txt {
+            width: 240px;
+            padding: 0 6px；
+        }
+        
+        .search-box:hover>.search-btn {
+            background: white;
+        }
+        
+        .search-btn {
+            color: #e84118;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            /*  */
+            /* margin-top: -5px;
+            margin-right: -4px; */
+            font-size: 15px;
+        }
+        
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
         }
     </style>
+
+
+
 
 </head>
 
@@ -68,8 +105,40 @@
 
     <!-- 头部 -->
     <header>
-
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">社区网</a></li>
+            <li><a href="#">小说网</a></li>
+            <li><a href="#">服装网</a></li>
+            <li><a href="#">壁纸网</a></li>
+            <li><a href="#">恋爱网</a></li>
+        </ul>
     </header>
+
+
+
+
+
+
+    <h1>My Gallery</h1>
+    <div class="border"></div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+        <!-- 搜索框 -->
+    </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -206,7 +275,21 @@
                 </a>
             </div>
         </div>
+
+        <div class="grid-item">
+            <div class="item-box">
+                <a href="/picture/7463" target="_blank">
+                    <img src="img/007.jpg" width="98%"> 韩妻外遇巅峰颜值
+                </a>
+            </div>
+        </div>
+
+
+
+
     </div>
+
+
 
 </body>
 <script type="text/javascript">

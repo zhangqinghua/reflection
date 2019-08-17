@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    /* 边距： 0 */
+    padding: 0;
+    /* 填充： 0 */
+    display: flex;
+    /* 显示：柔性 */
+    justify-content: center;
+    /* 合理性内容：中心 */
+    align-items: center;
+    /* 对齐项目：中心; */
+    height: 10vh;
+    /* 高度：10vh */
+    background: #112c38;
+    /* 背景 */
+}
+
+ul {
+    margin: 0;
+    /* 边距： 0 */
+    padding: 0;
+    /* 填充： 0 */
+    display: flex;
+    /* 显示：柔性 */
+}
+
+ul li {
+    list-style: none;
+    /* 列表样式：无 */
+    margin: 0 20px;
+    /* 边距： 0 20px */
+    transition: 0.5s;
+    /* 过渡： 0.5s */
+}
+
+ul li a {
+    display: block;
+    /* 显示：块 */
+    position: relative;
+    /* 位置：相对 */
+    text-decoration: none;
+    /* 文本修饰：无 */
+    padding: 5px;
+    /* 填充： 5px */
+    font-family: sans-serif;
+    /* 字体系列：无衬线; */
+    color: #fff;
+    /* 颜色 */
+    text-transform: uppercase;
+    /* 文本转换：大写 */
+    transition: 0.5s;
+    /* 过渡： 0.5s */
+}
+
+ul:hover li a {
+    transform: scale(1.5);
+    /* 变换：比例1.5 */
+    opacity: .2;
+    /* 不相使： .2 */
+    filter: blur(5px);
+    /* 滤镜：模糊5px */
+}
+
+ul li a:hover {
+    transform: scale(2);
+    /* 变换：规模2 */
+    opacity: 1;
+    /* 不相： 1 */
+    filter: blur(0);
+    /* 滤镜：模糊0 */
+}
+
+ul li a:before {
+    content: '';
+    /* 内容 */
+    position: absolute;
+    /* 位置：绝对 */
+    top: 0;
+    /* 顶部:0 */
+    left: 0;
+    /* 左： 0 */
+    width: 100%;
+    /* 宽度： 100% */
+    height: 100%;
+    /* 高度： 100% */
+    background: #ff497c;
+    /* 背景 */
+    transition: 0.5s;
+    /* 过渡： 0.5s */
+    transform-origin: right;
+    /* 变换原点：右 */
+    transform: scaleX(0);
+    /* 变换：缩放X */
+    z-index: -1;
+    /* 指数:-1 */
+}
+
+ul li a:hover:before {
+    transition: transform 0.5s;
+    /* 转换：转换 0.5s; */
+    transform-origin: left;
+    /* 变换原点：左; */
+    transform: scaleX(1);
+    /* 变换：缩放X */
+}
